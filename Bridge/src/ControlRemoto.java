@@ -1,4 +1,9 @@
+//Esta clase representa un control remoto genérico para dispositivos
+// proporciona métodos para controlar el encendido y apagado, el volumen y los canales de un dispositivo.
+
+
 public class ControlRemoto {
+
     protected Dispositivo dispositivo;
 
     public ControlRemoto(Dispositivo dispositivo) {
@@ -6,26 +11,27 @@ public class ControlRemoto {
     }
 
     public void encenderApagar() {
-        if (dispositivo.estaEncendido()) {
-            dispositivo.apagar();
+        if (this.dispositivo.estaEncendido()) {
+            this.dispositivo.apagar();
         } else {
-            dispositivo.encender();
+            this.dispositivo.encender();
         }
+
     }
 
     public void subirVolumen() {
-        dispositivo.setVolumen(dispositivo.getVolumen() + 10);
+        this.dispositivo.setVolumen(this.dispositivo.getVolumen() + 10);
     }
 
     public void bajarVolumen() {
-        dispositivo.setVolumen(dispositivo.getVolumen() - 10);
+        this.dispositivo.setVolumen(this.dispositivo.getVolumen() - 10);
     }
 
     public void canalSiguiente() {
-        dispositivo.setCanal(dispositivo.getCanal() + 1);
+        this.dispositivo.setCanal(this.dispositivo.getCanal() + 1);
     }
 
     public void canalAnterior() {
-        dispositivo.setCanal(dispositivo.getCanal() - 1);
+        this.dispositivo.setCanal(this.dispositivo.getCanal() - 1);
     }
 }

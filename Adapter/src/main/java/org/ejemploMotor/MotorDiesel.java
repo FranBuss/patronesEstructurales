@@ -1,4 +1,4 @@
-package org.natalin.ejemploMotor;
+package org.ejemploMotor;
 
 public class MotorDiesel extends Motor{
 

@@ -1,39 +1,43 @@
-//Esta clase representa un televisor con funcionalidades como encenderlo o apagarlo, ajustar el volumen y cambiar de canal.
+//La clase "TV" implementa la interfaz "Dispositivo" y proporciona implementaciones para todos los métodos definidos en la interfaz.
 
 public class TV implements Dispositivo {
     private boolean encendido = false;
     private int volumen = 30;
     private int canal = 1;
+
+    public TV() {
+    }
+
     public boolean estaEncendido() {
-        return encendido;
+        return this.encendido;
     }
 
     public void encender() {
-        System.out.println("encendiendo tv... " );
-        encendido = true;
+        System.out.println("encendiendo tv... ");
+        this.encendido = true;
     }
 
     public void apagar() {
-        System.out.println("apagando tv... " );
-        encendido = false;
-
+        System.out.println("apagando tv... ");
+        this.encendido = false;
     }
 
     public int getVolumen() {
-        System.out.println("el volumen de la tv esta en: " + volumen);
-        return volumen;
+        System.out.println("el volumen de la tv esta en: " + this.volumen);
+        return this.volumen;
     }
 
     public void setVolumen(int porcentaje) {
         if (porcentaje >= 0 && porcentaje <= 100) {
-            volumen = porcentaje;
+            this.volumen = porcentaje;
             System.out.println("cambiando el volumen de la tv a: " + porcentaje);
         }
+
     }
 
     public int getCanal() {
-        System.out.println("el canal de la tv es: " + canal);
-        return canal;
+        System.out.println("el canal de la tv es: " + this.canal);
+        return this.canal;
     }
 
     public void setCanal(int canal) {

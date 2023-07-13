@@ -1,8 +1,12 @@
-package org.natalin.ejemploMotor;
+package org.ejemploMotor;
 
 public class Main {
 
     public static void main(String[] args) {
+
+
+        //Se crean instancias de diferentes tipos de motores,
+        // incluyendo un motor diesel, un motor común y un motor eléctrico adaptado
 
         Motor motor1 = new MotorDiesel();
         Motor motor2 = new MotorComun();
@@ -29,3 +33,5 @@ public class Main {
 
     }
 }
+// Este código proporciona un ejemplo de cómo se pueden utilizar diferentes tipos de motores
+// y cómo se puede adaptar un motor eléctrico utilizando un adaptador para que sea compatible con la interfaz de la clase abstracta "Motor".

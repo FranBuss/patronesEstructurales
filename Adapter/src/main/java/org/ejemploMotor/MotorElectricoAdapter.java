@@ -1,5 +1,7 @@
-package org.natalin.ejemploMotor;
+package org.ejemploMotor;
 
+
+//La clase "MotorElectricoAdapter" actúa como un adaptador entre la interfaz de la clase "Motor" y un objeto de la clase "MotorElectrico" que se está adaptando.
 public class MotorElectricoAdapter extends Motor{
 
     //Hacemos una referencia al objeto MotorElectrico que estamos adaptando
@@ -9,6 +11,10 @@ public class MotorElectricoAdapter extends Motor{
     public MotorElectricoAdapter(MotorElectrico motorElectrico) {
         this.motorElectrico = motorElectrico;
     }
+
+    //En la clase "MotorElectricoAdapter", se declara una referencia motorElectrico de tipo "MotorElectrico".
+    //Esta referencia se utilizará para hacer referencia al objeto de la clase "MotorElectrico" que estamos adaptando.
+    //Se proporciona un constructor que recibe un objeto "MotorElectrico" como parámetro y asigna ese objeto a la referencia motorElectrico.
 
     @Override
     public void encender() {
@@ -30,3 +36,6 @@ public class MotorElectricoAdapter extends Motor{
         this.motorElectrico.desconectar();
     }
 }
+//"MotorElectricoAdapter" actúa como un puente entre la interfaz abstracta "Motor" y el objeto "MotorElectrico" que se está adaptando,
+// permitiendo que el objeto "MotorElectrico" sea utilizado como si fuera un objeto de la clase "Motor"
+// en contextos donde se requiere una instancia de "Motor".

@@ -1,5 +1,7 @@
-package org.natalin.ejemploMotor;
+package org.ejemploMotor;
 
+
+//La clase "MotorComun" proporciona una implementación específica para los métodos abstractos heredados de la clase "Motor".
 public class MotorComun extends Motor {
 
 

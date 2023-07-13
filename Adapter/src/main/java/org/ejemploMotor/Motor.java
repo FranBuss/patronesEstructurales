@@ -1,5 +1,6 @@
-package org.natalin.ejemploMotor;
+package org.ejemploMotor;
 
+//Este código define la clase abstracta "Motor"
 public abstract class Motor {
 
         abstract public void encender();
