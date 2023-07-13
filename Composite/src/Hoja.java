@@ -14,6 +14,6 @@ class Hoja extends Componente
     }
     public void Mostrar(int depth)
     {
-        System.out.println('-' + "" + nombre);
+        System.out.println('-' + nombre);
     }
 }
