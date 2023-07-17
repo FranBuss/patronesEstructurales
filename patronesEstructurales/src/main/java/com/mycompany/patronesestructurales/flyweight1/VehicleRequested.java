@@ -21,26 +21,23 @@ import java.util.List;
  * en el método showOptions.
  */
 public class VehicleRequested {
-
     protected List<VehicleOption> options = new ArrayList<VehicleOption>();
-    
     protected List<Integer> salePriceOptions = new ArrayList<Integer>();
-    
-    public void addOptions(String name, int salePrice, FactoryOption factory){
-        options.add(factory.getOption(name));
+
+    public void addOptions(String brand, String model, int year, int salePrice, FactoryOption factory) {
+        VehicleOption option = factory.getOption(brand, model, year);
+        options.add(option);
         salePriceOptions.add(salePrice);
     }
-    
-    public void showOptions(){
+
+    public void showOptions() {
         int index, width;
-        
-       width = options.size();
-       for (index = 0; index < width; index++ ){
-           options.get(index).visualize(salePriceOptions.get(index));
-           System.out.println();
-       }
+
+        width = options.size();
+        for (index = 0; index < width; index++) {
+            System.out.println("Opción " + (index + 1));
+            options.get(index).visualize(salePriceOptions.get(index));
+            System.out.println();
+        }
     }
-    
-    
-    
 }

@@ -4,29 +4,28 @@
  */
 package com.mycompany.patronesestructurales.flyweight1;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
 /**
  * La clase FactoryOption gestiona la comparticion de las opciones con ayuda de
- * un diccionario, cuya clave de acceso esel nombre de la opcion. El metodo
+ * un diccionario, cuya clave de acceso es el nombre de la opcion. El metodo
  * getOption busca en este diccionario y si no encuentra la opcion, la crea, la
  * agrega al diccionario y la devuelve
  */
 public class FactoryOption {
+    protected Map<String, VehicleOption> optionsCache = new HashMap<>();
 
-    protected Map<String, VehicleOption> options = new TreeMap<String, VehicleOption>();
+    public VehicleOption getOption(String brand, String model, int year) {
+        String key = brand + "-" + model + "-" + year;
 
-    public VehicleOption getOption(String name) {
-        VehicleOption result;
-
-        if (options.containsKey(name)) {
-            return options.get(name);
+        if (optionsCache.containsKey(key)) {
+            return optionsCache.get(key);
         } else {
-            result = new VehicleOption(name);
-            options.put(name, result);
+            VehicleOption result = new VehicleOption(brand, model, year);
+            optionsCache.put(key, result);
+            return result;
         }
-        return result;
-
     }
 }

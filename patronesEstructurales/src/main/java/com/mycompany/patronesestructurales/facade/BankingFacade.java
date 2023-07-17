@@ -25,7 +25,7 @@ public class BankingFacade {
             bankAccount.processTransaction(accountNumber, amount);
             auditLogger.logTransaction(accountNumber, amount);
         } else {
-            System.out.println("Identity verification failed. Transaction aborted.");
+            System.out.println("Fallo la verificacion de identidad, operacion cancelada");
         }
     }
 }
