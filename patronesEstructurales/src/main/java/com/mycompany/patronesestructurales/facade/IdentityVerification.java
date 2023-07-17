@@ -8,8 +8,8 @@ package com.mycompany.patronesestructurales.facade;
 
 public class IdentityVerification {
       public boolean verifyIdentity(String name, String address) {
-        System.out.println("Verifying identity for: " + name);
-        System.out.println("Address: " + address);
+        System.out.println("Verificacion de identidad: " + name);
+        System.out.println("Domicilio: " + address);
         return true;
     }
 }

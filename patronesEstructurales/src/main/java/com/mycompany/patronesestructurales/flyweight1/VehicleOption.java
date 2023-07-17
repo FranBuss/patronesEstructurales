@@ -13,24 +13,23 @@ package com.mycompany.patronesestructurales.flyweight1;
  * estado extrínseco.
  */
 public class VehicleOption {
- protected String name;
- protected String description;
- protected int standardPrice;
+    protected static int count = 0;
+    protected int optionNumber;
+    protected String brand;
+    protected String model;
+    protected int year;
 
-    public VehicleOption(String name) {
-        this.name = name;
-        this.description = "Description of " + name;
-        this.standardPrice = 1500;
+    public VehicleOption(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.optionNumber = ++count;
     }
 
-  public void visualize(int salePrice){
-      System.out.println("Option");
-      System.out.println("Name: " + name);
-      System.out.println(description);
-      System.out.println("Standard price: " + standardPrice);
-      System.out.println("Sale price: " + salePrice);
-  }
- 
- 
- 
+    public void visualize(int salePrice) {
+        System.out.println("Marca: " + brand);
+        System.out.println("Modelo: " + model);
+        System.out.println("Año: " + year);
+        System.out.println("Precio de Venta: " + salePrice);
+    }
 }

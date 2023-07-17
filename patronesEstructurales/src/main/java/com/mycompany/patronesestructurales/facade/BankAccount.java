@@ -14,11 +14,11 @@ package com.mycompany.patronesestructurales.facade;
 
 public class BankAccount {
  public void verifyAccount(String accountNumber) {
-        System.out.println("Verifying bank account: " + accountNumber);
+        System.out.println("Verificacion de numero de cuenta " + accountNumber);
     }
     
     public void processTransaction(String accountNumber, double amount) {
-        System.out.println("Processing transaction for account: " + accountNumber);
-        System.out.println("Amount: " + amount);
+    //    System.out.println("Numero de cuenta: " + accountNumber);
+        System.out.println("Monto: " + amount);
     }
 }

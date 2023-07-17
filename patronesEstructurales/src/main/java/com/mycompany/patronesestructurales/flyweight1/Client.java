@@ -9,15 +9,13 @@ package com.mycompany.patronesestructurales.flyweight1;
  * vehículo solicitado, le agrega tres opciones y a continuación las muestra.
  */
 public class Client {
-
     public static void main(String[] args) {
-        
         FactoryOption factory = new FactoryOption();
         VehicleRequested vehicle = new VehicleRequested();
-        vehicle.addOptions("Air Bag", 56000, factory);
-        vehicle.addOptions("Direccion asistida", 75000, factory);
-        vehicle.addOptions("Climatizador", 45000, factory);
+        vehicle.addOptions("Fiat", "Punto", 2013, 150000, factory);
+        vehicle.addOptions("Ford", "Focus", 2018, 185000, factory);
+        vehicle.addOptions("Renault", "Clio", 2000, 95000, factory);
+        vehicle.addOptions("Peugeot", "308", 2020, 230000, factory);
         vehicle.showOptions();
     }
-    
 }

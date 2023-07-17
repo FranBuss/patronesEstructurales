@@ -8,7 +8,7 @@ package com.mycompany.patronesestructurales.facade;
 
 public class AuditLogger {
     public void logTransaction(String accountNumber, double amount) {
-        System.out.println("Logging transaction for account: " + accountNumber);
-        System.out.println("Amount: " + amount);
+        System.out.println("Registro de transaccion: " + accountNumber);
+        System.out.println("Monto: " + amount);
     }
 }
